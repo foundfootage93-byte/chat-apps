@@ -1,0 +1,37 @@
+:root{
+--bg:#0f1724;
+--panel:#0b1220;
+--accent:#6ee7b7;
+--muted:#9aa6b2;
+--message-bg:#112233;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Helvetica,Arial;background:linear-gradient(180deg,#081024 0%, #06111a 100%);color:#e6eef6;margin:0;height:100vh;display:flex;align-items:stretch}
+.app{display:flex;width:100%;height:100vh}
+.sidebar{width:300px;background:linear-gradient(180deg,var(--panel),#071229);padding:20px;display:flex;flex-direction:column;gap:16px}
+.brand{font-weight:700;font-size:22px;color:var(--accent)}
+.profile{display:flex;gap:8px}
+.profile input{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.profile button{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#042022;cursor:pointer}
+.contacts{margin-top:8px;flex:1}
+.contact{padding:12px;border-radius:10px;margin-bottom:8px;background:transparent;border:1px solid rgba(255,255,255,0.03)}
+.contact.active{background:linear-gradient(90deg, rgba(110,231,183,0.08), rgba(110,231,183,0.02));border-color:rgba(110,231,183,0.18)}
+
+
+.chat-area{flex:1;display:flex;flex-direction:column;padding:20px}
+.chat-header{height:56px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,0.03);margin-bottom:12px}
+.title{font-weight:600}
+.messages{list-style:none;padding:12px;display:flex;flex-direction:column;gap:12px;overflow:auto;flex:1}
+.message{max-width:70%;padding:10px 12px;border-radius:12px;background:var(--message-bg);box-shadow:0 1px 0 rgba(0,0,0,0.4)}
+.message.me{margin-left:auto;background:linear-gradient(90deg, rgba(110,231,183,0.12), rgba(110,231,183,0.06))}
+.message .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+.message img{max-width:320px;border-radius:8px;display:block}
+.composer{display:flex;gap:8px;padding-top:12px}
+.composer input[type="text"]{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.composer button{padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:#042022;cursor:pointer}
+.imageLabel{display:inline-flex;align-items:center;justify-content:center;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+.imageLabel input{display:none}
+
+
+/* responsive */
+@media(max-width:800px){.sidebar{display:none}.messages .message{max-width:90%}}

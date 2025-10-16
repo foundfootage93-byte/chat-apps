@@ -1,2 +1,8 @@
-# chat-apps
-apps yang dikemabangkan melalui sebuah website untuk memudahkan dalam mengrim sebuah pesan 
+# Chat App — lokal
+
+
+1. Install dep:
+
+
+```bash
+npm install

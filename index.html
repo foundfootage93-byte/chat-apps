@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chat App — Messenger Lokal</title>
+<link rel="stylesheet" href="style.css" />
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">Chat App</div>
+<div class="profile">
+<input id="nameInput" placeholder="Masukkan nama anda" />
+<button id="setNameBtn">Set</button>
+</div>
+<div class="contacts">
+<div class="contact active">General Chat</div>
+</div>
+</aside>
+
+
+<main class="chat-area">
+<header class="chat-header">
+<div class="title">General Chat</div>
+</header>
+
+
+<ul id="messages" class="messages"></ul>
+
+
+<form id="messageForm" class="composer">
+<label class="imageLabel">
+📷
+<input id="imageInput" type="file" accept="image/*" />
+</label>
+<input id="messageInput" type="text" placeholder="Ketik pesan..." autocomplete="off" />
+<button type="submit">Kirim</button>
+</form>
+</main>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
